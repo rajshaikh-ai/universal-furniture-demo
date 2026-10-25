@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Universal Furniture Jalandhar</title>
+<meta name="description" content="Universal Furniture, Sodal Road, Jalandhar: sofas, couches, beds, mattresses, dining tables, home and garden furniture. Retail, wholesale and manufacturing with home delivery. Call +91 98729 90970.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: warm showroom page. Ivory ground, walnut bands for the story, UF orange only on actions. */
+:root{
+  --ivory:#F6F1E9; --paper:#FFFDF9; --sand:#EADFCF; --line:#DDD0BD;
+  --ink:#211B17; --muted:#6B5E54; --walnut:#36261C; --walnut-2:#4A3426; --on-walnut:#F4EADC; --on-walnut-muted:#CDBBA6;
+  --brand:#E0531C; --brand-deep:#B9400F; --brand-soft:#F8E2D5; --star:#E6A019; --wa:#1F9D55;
+  --display:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r-sm:10px; --r-md:16px; --r-lg:24px;
+  --shadow:0 1px 2px rgba(54,38,28,.06),0 12px 32px -12px rgba(54,38,28,.22);
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px)); --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:60;background:var(--paper)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+h2{font-size:clamp(2rem,4vw,3rem)}
+h3{font-size:1.5rem}
+p{margin:0}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:56ch}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.75em 1.4em;border-radius:999px;font:600 .95rem/1 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease,color .2s ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px -10px rgba(224,83,28,.8)}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#178246;transform:translateY(-1px)}
+.btn-light{border-color:var(--on-walnut);color:var(--on-walnut)}
+.btn-light:hover{background:var(--on-walnut);color:var(--walnut)}
+.btn-sm{min-height:40px;padding:.6em 1.1em;font-size:.88rem}
+
+/* Header */
+.site-header{position:sticky;top:env(safe-area-inset-top, 0px);z-index:50;background:rgba(255,253,249,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:38px;height:38px;object-fit:contain}
+.brand-name{display:flex;flex-direction:column;line-height:1}
+.brand-name b{font:700 1.06rem/1 var(--body);letter-spacing:.01em}
+.brand-name span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover::after{transform:scaleX(1)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--ink);align-items:center;justify-content:center}
+.menu-btn svg{width:22px;height:22px}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav .btn-primary{display:none}
+  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--gutter-r) 16px var(--gutter-l);box-shadow:var(--shadow)}
+  .nav-links:not(.open){display:none}
+  .nav-links a{display:block;padding:14px 4px;border-bottom:1px solid var(--sand);font-size:1.05rem}
+  .nav-links li:last-child a{border-bottom:0}
+  .nav-links .mobile-cta{display:block;margin-top:12px}
+  .nav-links .mobile-cta a{border:0;color:#fff;text-align:center}
+}
+@media (min-width:901px){.nav-links .mobile-cta{display:none}}
+
+/* Hero */
+.hero{padding-block:56px 40px;background:linear-gradient(180deg,var(--paper) 0%,var(--ivory) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1 em{font-style:italic;color:var(--brand-deep);font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 22px;padding-top:8px;color:var(--muted);font-size:.92rem}
+.hero-facts span{display:inline-flex;align-items:center;gap:8px}
+.hero-facts svg{width:18px;height:18px;color:var(--brand-deep)}
+.stars{display:inline-flex;gap:2px;color:var(--star)}
+.stars svg{width:15px;height:15px}
+.collage{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px;max-width:520px;justify-self:end;width:100%}
+.collage figure{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--sand)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage .tall{grid-row:1 / span 2;aspect-ratio:3/5}
+.collage .sq{aspect-ratio:4/3.4}
+.collage .badge{position:absolute;left:-18px;bottom:28px;background:var(--walnut);color:var(--on-walnut);border-radius:var(--r-md);padding:14px 18px;box-shadow:var(--shadow);font-size:.85rem;line-height:1.35;max-width:220px}
+.collage .badge b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:600;color:#fff}
+@media (max-width:900px){
+  .hero{padding-block:32px 28px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .collage{justify-self:stretch;max-width:none}
+  .collage .badge{left:12px;bottom:12px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(2){animation-delay:.06s}.hero-copy > *:nth-child(3){animation-delay:.12s}
+  .hero-copy > *:nth-child(4){animation-delay:.18s}.hero-copy > *:nth-child(5){animation-delay:.24s}
+  .collage figure{animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+}
+
+/* Sections */
+.section{padding-block:88px}
+.section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:40px}
+.section-head > div:not(.filters){display:flex;flex-direction:column;gap:12px;min-width:0;max-width:640px}
+@media (max-width:700px){.section{padding-block:60px}}
+
+/* Categories */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cat{position:relative;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}
+.cat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cat-img{aspect-ratio:16/10;overflow:hidden;background:var(--sand)}
+.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.cat:hover .cat-img img{transform:scale(1.05)}
+.cat-body{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:18px 20px 20px}
+.cat-body p{color:var(--muted);font-size:.9rem;margin-top:4px}
+.cat-arrow{flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--brand-deep);transition:background .2s,color .2s,border-color .2s}
+.cat:hover .cat-arrow{background:var(--brand);border-color:var(--brand);color:#fff}
+.cat-arrow svg{width:18px;height:18px}
+.cat-garden .cat-img{display:grid;place-items:center;background:
+  radial-gradient(circle at 20% 30%,rgba(255,255,255,.08) 0 18%,transparent 19%),
+  radial-gradient(circle at 80% 70%,rgba(255,255,255,.06) 0 24%,transparent 25%),
+  linear-gradient(135deg,#3F5A3A,#2C4029);color:#E7EFD9;text-align:center;padding:20px}
+.cat-garden .cat-img span{font-family:var(--display);font-size:1.6rem;font-style:italic;line-height:1.2}
+.cat-garden .cat-img small{display:block;font:500 .8rem/1.4 var(--body);letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin-top:8px}
+@media (max-width:900px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cats{grid-template-columns:1fr}.cat-img{aspect-ratio:16/9}}
+
+/* Collection */
+.collection{background:var(--paper);border-block:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 .88rem/1 var(--body);padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.product{display:flex;flex-direction:column;background:var(--ivory);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--sand)}
+.product-img{aspect-ratio:1/1;overflow:hidden;background:var(--sand)}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.product:hover .product-img img{transform:scale(1.05)}
+.product-body{display:flex;flex-direction:column;gap:6px;padding:16px 16px 18px;flex:1}
+.product-body .tag{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.product-body h3{font-size:1.3rem;line-height:1.15}
+.product-body .note{font-size:.86rem;color:var(--muted)}
+.product-body .btn{margin-top:auto;align-self:flex-start}
+.product-body .note + .btn{margin-top:12px}
+.products-foot{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;border-radius:var(--r-md);background:var(--brand-soft);color:var(--walnut)}
+.products-foot p{max-width:60ch}
+@media (max-width:1000px){.products{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.products{grid-template-columns:repeat(2,1fr);gap:14px}.product-body{padding:12px 12px 14px}.product-body h3{font-size:1.12rem}.product-body .btn{width:100%}}
+
+/* About / showroom band */
+.band{background:radial-gradient(1200px 500px at 85% -10%,var(--walnut-2),transparent 60%),linear-gradient(160deg,var(--walnut),#2A1D15);color:var(--on-walnut)}
+.band .eyebrow{color:#F0A27C}
+.band .lead{color:var(--on-walnut-muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.pillar{border:1px solid rgba(244,234,220,.18);border-radius:var(--r-md);padding:16px;background:rgba(255,255,255,.03)}
+.pillar b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:600;color:#fff;margin-bottom:4px}
+.pillar span{font-size:.86rem;color:var(--on-walnut-muted);line-height:1.45;display:block}
+.about-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.about-list li{display:flex;gap:10px;align-items:flex-start}
+.about-list svg{width:20px;height:20px;flex:none;color:#F0A27C;margin-top:2px}
+.showroom-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.showroom-photos figure{margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--walnut-2)}
+.showroom-photos img{width:100%;height:100%;object-fit:cover}
+.showroom-photos .wide{grid-column:1 / -1;aspect-ratio:16/9}
+.showroom-photos .half{aspect-ratio:1/1}
+.showroom-photos figcaption{font-size:.8rem;color:var(--on-walnut-muted);padding:8px 2px 0}
+.band-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:560px){.pillars{grid-template-columns:1fr}}
+
+/* Visit */
+.visit{background:var(--sand)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.panel{background:var(--paper);border-radius:var(--r-lg);padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:22px;min-width:0}
+.addr{display:flex;gap:14px;align-items:flex-start}
+.addr svg{width:24px;height:24px;color:var(--brand);flex:none;margin-top:3px}
+.addr address{font-style:normal;font-size:1.05rem;line-height:1.5}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.actions .btn{width:100%}
+.actions .full{grid-column:1 / -1}
+.phone-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border:1px dashed var(--line);border-radius:var(--r-md)}
+.phone-row .num{font-family:var(--display);font-size:1.7rem;font-weight:600;letter-spacing:.01em;user-select:all;font-variant-numeric:tabular-nums}
+.phone-row .num small{display:block;font:600 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.copy-btn{font:600 .85rem/1 var(--body);padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;color:var(--ink)}
+.copy-btn:hover{border-color:var(--ink)}
+.form{display:grid;gap:14px}
+.form label{display:grid;gap:6px;font-size:.86rem;font-weight:600}
+.form input,.form select,.form textarea{font:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--ivory);color:var(--ink);width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--brand);background:var(--paper)}
+.form textarea{min-height:96px;resize:vertical}
+.form .hint{font-size:.8rem;color:var(--muted);font-weight:400}
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.social{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);text-decoration:none;font-weight:600;font-size:.88rem}
+.social:hover{border-color:var(--ink)}
+.social svg{width:18px;height:18px}
+.panel h3{font-size:1.7rem}
+@media (max-width:900px){.visit-grid{grid-template-columns:1fr}.panel{padding:22px}}
+@media (max-width:420px){.actions{grid-template-columns:1fr}}
+
+/* Footer */
+.footer{background:var(--walnut);color:var(--on-walnut-muted);padding-block:56px 32px;font-size:.92rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.footer h4{font:700 .78rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--on-walnut);margin:0 0 14px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer a{text-decoration:none}
+.footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.footer .brand-name b{color:#fff}
+.footer .brand-name span{color:var(--on-walnut-muted)}
+.footer .brand img{background:#fff;border-radius:10px;padding:4px;width:42px;height:42px}
+.footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(244,234,220,.15);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.82rem}
+@media (max-width:800px){.footer-grid{grid-template-columns:1fr}}
+
+/* Floating WhatsApp */
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right, 0px));bottom:calc(18px + env(safe-area-inset-bottom, 0px));z-index:40;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .2s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:28px;height:28px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom, 0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-size:.88rem;z-index:70}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://rajshaikh-ai.github.io/universal-furniture-demo/">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FFFDF9">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Universal Furniture, Jalandhar">
+<meta property="og:description" content="Sofas, beds, mattresses, dining, home and garden furniture. Retail, wholesale and manufacturing on Sodal Road, Jalandhar, with home delivery.">
+<meta property="og:image" content="https://rajshaikh-ai.github.io/universal-furniture-demo/assets/img/showroom-1.jpg">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://rajshaikh-ai.github.io/universal-furniture-demo/">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FurnitureStore",
+  "name":"Universal Furniture",
+  "telephone":"+91-98729-90970",
+  "image":"https://rajshaikh-ai.github.io/universal-furniture-demo/assets/img/storefront.jpg",
+  "address":{"@type":"PostalAddress","streetAddress":"115, Sodal Road, Shiv Nagar, Industrial Area, near Sodal Mandir","addressLocality":"Jalandhar","addressRegion":"Punjab","postalCode":"144008","addressCountry":"IN"},
+  "hasMap":"https://maps.app.goo.gl/44KTR6D2WoAp3mGf6",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"21:00"}
+  ],
+  "sameAs":["https://www.instagram.com/universal_furniture_jalandhar/"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Universal Furniture, home">
+      <img src="assets/img/mark.png" alt="" width="38" height="38">
+      <span class="brand-name"><b>Universal Furniture</b><span>Jalandhar</span></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#visit">Visit us</a></li>
+      <li class="mobile-cta"><a class="btn btn-wa wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">Enquire on WhatsApp</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">Enquire now</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Sodal Road, Jalandhar</span>
+        <h1>Furniture for every room, <em>made and sold</em> under one roof</h1>
+        <p class="lead">Sofas, couches, beds, mattresses, dining tables, home and garden furniture. Universal Furniture manufactures, sells wholesale and retails from its showroom in Jalandhar, with home delivery.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#gallery">Shop the collection
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            WhatsApp us</a>
+        </div>
+        <div class="hero-facts">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Home delivery</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>Retail &amp; wholesale</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Open 7 days</span>
+        </div>
+      </div>
+      <div class="collage">
+        <figure class="tall"><img src="assets/img/storefront.webp" alt="Universal Furniture showroom building on Sodal Road, lit up at night" width="458" height="766" fetchpriority="high"></figure>
+        <figure class="sq"><img src="assets/img/sofa-navy-sectional.webp" alt="Navy velvet corner sectional sofa with matching armchair" width="444" height="318"></figure>
+        <figure class="sq"><img src="assets/img/bed-tan.webp" alt="Upholstered double bed with a tan leatherette headboard" width="458" height="574"></figure>
+        <div class="badge"><b>Mon–Sat 10–9</b>Sunday 11 AM–9 PM</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collections" aria-labelledby="cat-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Shop by category</span>
+          <h2 id="cat-title">What you will find in the showroom</h2>
+        </div>
+        <p class="lead">Browse the range below, then send us a WhatsApp message for sizes, finishes and current prices.</p>
+      </div>
+      <div class="cats">
+        <a class="cat" href="#gallery" data-goto="sofas">
+          <div class="cat-img"><img src="assets/img/living-room-set.webp" alt="Living room with a white and navy sofa set" loading="lazy" width="404" height="404"></div>
+          <div class="cat-body"><div><h3>Sofas &amp; couches</h3><p>Sofa sets, sectionals, sofa cum beds, recliners</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+        <a class="cat" href="#gallery" data-goto="beds">
+          <div class="cat-img"><img src="assets/img/bed-teal.webp" alt="Double bed with a teal channel-tufted headboard" loading="lazy" width="458" height="382"></div>
+          <div class="cat-body"><div><h3>Beds</h3><p>Upholstered and storage beds</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+        <a class="cat" href="#gallery" data-goto="beds">
+          <div class="cat-img"><img src="assets/img/bed-tan.webp" alt="Mattress displayed on an upholstered bed" loading="lazy" width="458" height="574"></div>
+          <div class="cat-body"><div><h3>Mattresses</h3><p>Mattresses from different companies</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+        <a class="cat" href="#gallery" data-goto="dining">
+          <div class="cat-img"><img src="assets/img/dining-chair.webp" alt="Grey velvet dining chair with wooden legs" loading="lazy" width="458" height="766" style="object-position:50% 40%"></div>
+          <div class="cat-body"><div><h3>Dining</h3><p>Dining tables and chairs</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+        <a class="cat" href="#gallery" data-goto="home">
+          <div class="cat-img"><img src="assets/img/office-desk.webp" alt="Executive office desk with chrome chairs" loading="lazy" width="404" height="404"></div>
+          <div class="cat-body"><div><h3>Home &amp; office</h3><p>Dressers, desks, office chairs</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+        <a class="cat cat-garden wa-link" href="https://wa.me/919872990970" data-product="Garden furniture" target="_blank" rel="noopener">
+          <div class="cat-img"><span>Garden furniture<small>Ask on WhatsApp for current designs</small></span></div>
+          <div class="cat-body"><div><h3>Garden</h3><p>Outdoor seating for lawns and terraces</p></div><span class="cat-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="gallery" aria-labelledby="gal-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">From our showroom floor</span>
+          <h2 id="gal-title">Featured collection</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="sofas" aria-pressed="false">Sofas</button>
+          <button class="chip" type="button" data-filter="beds" aria-pressed="false">Beds</button>
+          <button class="chip" type="button" data-filter="dining" aria-pressed="false">Dining</button>
+          <button class="chip" type="button" data-filter="home" aria-pressed="false">Home &amp; office</button>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+      <div class="products-foot">
+        <p><strong>Prices on request.</strong> Stock and finishes change often, so we confirm price and availability on WhatsApp or by phone.</p>
+        <a class="btn btn-wa wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">Ask for the full catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="eyebrow">About Universal Furniture</span>
+        <h2 id="about-title">A furniture maker and showroom on Sodal Road</h2>
+        <p class="lead">Universal Furniture is a furniture manufacturer, wholesaler and retail store in the Industrial Area near Sodal Mandir, Jalandhar. Visit the showroom to see sofas, beds, mattresses, dining and home furniture in person before you buy.</p>
+        <div class="pillars">
+          <div class="pillar"><b>Manufacturing</b><span>Couches and sofas made by us</span></div>
+          <div class="pillar"><b>Wholesale</b><span>Supply for dealers and bulk orders</span></div>
+          <div class="pillar"><b>Retail</b><span>Walk-in showroom for homes</span></div>
+        </div>
+        <ul class="about-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Home delivery available</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mattresses from different companies</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open every day of the week</li>
+        </ul>
+        <div class="band-ctas">
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/44KTR6D2WoAp3mGf6" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-light" href="#visit">Contact us</a>
+        </div>
+      </div>
+      <div class="showroom-photos">
+        <figure class="wide"><img src="assets/img/showroom-1.webp" alt="Inside the Universal Furniture showroom: sofas, beds and display units" loading="lazy" width="458" height="328"></figure>
+        <figure class="half"><img src="assets/img/showroom-2.webp" alt="Showroom aisle with sofa sets, cushions and dressing units" loading="lazy" width="458" height="328"></figure>
+        <figure class="half"><img src="assets/img/recliner.webp" alt="Blue two-seater recliner sofa on display" loading="lazy" width="404" height="404"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Visit or contact us</span>
+          <h2 id="visit-title">Visit the showroom</h2>
+        </div>
+      </div>
+      <div class="visit-grid">
+        <div class="panel">
+          <div class="addr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <address>Universal Furniture<br>115, Sodal Road, Industrial Area,<br>near Sodal Mandir, Jalandhar,<br>Punjab 144008, India</address>
+          </div>
+          <div class="phone-row">
+            <span class="num"><small>Call the showroom</small>+91 98729 90970</span>
+            <button class="copy-btn" type="button" id="copy-phone">Copy number</button>
+          </div>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+919872990970">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              Call now</a>
+            <a class="btn btn-wa wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
+              WhatsApp</a>
+            <a class="btn btn-ghost full" href="https://maps.app.goo.gl/44KTR6D2WoAp3mGf6" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 19-9-9 19-2-8-8-2z"/></svg>
+              Get directions on Google Maps</a>
+          </div>
+          <div>
+            <h4 class="eyebrow" style="margin:0 0 10px">Follow us</h4>
+            <div class="socials">
+              <a class="social" href="https://www.instagram.com/universal_furniture_jalandhar/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                @universal_furniture_jalandhar</a>
+              <a class="social" href="https://www.facebook.com/search/top?q=Universal%20Furniture%20Jalandhar" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.5-4H12V7.8c0-.6.4-.8 1-.8h2z"/></svg>
+                Universal Furniture</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Send an enquiry</h3>
+          <form class="form" id="enquiry" novalidate>
+            <label for="f-name">Your name
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Harpreet Singh">
+            </label>
+            <label for="f-interest">Interested in
+              <select id="f-interest" name="interest">
+                <option>Sofas &amp; couches</option>
+                <option>Beds</option>
+                <option>Mattresses</option>
+                <option>Dining tables &amp; chairs</option>
+                <option>Home &amp; office furniture</option>
+                <option>Garden furniture</option>
+                <option>Wholesale / bulk order</option>
+              </select>
+            </label>
+            <label for="f-msg">Message <span class="hint">(optional: size, colour, delivery area)</span>
+              <textarea id="f-msg" name="message" placeholder="I’m looking for a 3+1+1 sofa set for my living room."></textarea>
+            </label>
+            <a class="btn btn-wa" id="enquiry-send" href="https://wa.me/919872990970" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.3A8.4 8.4 0 1 1 21 11.5z"/></svg>
+              Continue in WhatsApp</a>
+            <p class="hint">This opens WhatsApp with your message filled in. Nothing is sent until you press send in WhatsApp.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div style="display:grid;gap:14px">
+        <a class="brand" href="#top"><img src="assets/img/mark.png" alt="" width="42" height="42"><span class="brand-name"><b>Universal Furniture</b><span>Jalandhar, Punjab</span></span></a>
+        <p>Furniture retail, wholesale and manufacturing. Sofas, beds, mattresses, dining, home and garden furniture, with home delivery.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#collections">Categories</a></li>
+          <li><a href="#gallery">Featured collection</a></li>
+          <li><a href="#about">About the showroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919872990970">+91 98729 90970</a></li>
+          <li><a class="wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener">WhatsApp enquiry</a></li>
+          <li><a href="https://maps.app.goo.gl/44KTR6D2WoAp3mGf6" target="_blank" rel="noopener">115, Sodal Road, Jalandhar</a></li>
+          <li>Mon–Sat 10 AM–9 PM · Sun 11 AM–9 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Universal Furniture, Jalandhar</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab wa-link" href="https://wa.me/919872990970" target="_blank" rel="noopener" aria-label="Chat with Universal Furniture on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.3A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.8-.4-1.4-1-1.8-1.8l.8-1-1-2L9 9.5z" fill="currentColor" stroke="none"/></svg>
+</a>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var PHONE = "919872990970";
+  var waUrl = function(text){ return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(text); };
+  var GREETING = "Hello Universal Furniture, I found you on your website. ";
+
+  // Products shown in the gallery. Names describe the photos; no prices are listed.
+  var products = [
+    {img:"living-room-set", cat:"sofas", tag:"Sofa set", name:"Living room sofa set with wing chairs", alt:"White sofa set with navy cushions and two navy wing chairs"},
+    {img:"sofa-navy-sectional", cat:"sofas", tag:"Sectional", name:"Corner sectional in navy velvet", alt:"Navy velvet corner sectional sofa with gold trim"},
+    {img:"sofa-cum-bed", cat:"sofas", tag:"Sofa cum bed", name:"Quilted sofa cum bed", alt:"Blue quilted sofa cum bed with bolster arms"},
+    {img:"recliner", cat:"sofas", tag:"Recliner", name:"Two-seater recliner", alt:"Blue two-seater recliner with footrests raised"},
+    {img:"sofa-ivory", cat:"sofas", tag:"Sofa", name:"Three-seater with brass legs", alt:"Light grey three-seater sofa with brass legs"},
+    {img:"sofa-grey-set", cat:"sofas", tag:"Sofa set", name:"Tufted sofa set with ottoman", alt:"Grey-green tufted sofa set with tub chairs and an ottoman"},
+    {img:"bed-tan", cat:"beds", tag:"Bed", name:"Upholstered bed, tan finish", alt:"Double bed with a tan leatherette headboard and mattress"},
+    {img:"bed-teal", cat:"beds", tag:"Bed", name:"Channel-tufted bed, teal", alt:"Double bed with a teal channel-tufted headboard"},
+    {img:"dining-chair", cat:"dining", tag:"Dining", name:"Velvet dining chair", alt:"Grey velvet dining chair with tapered legs"},
+    {img:"dresser-mirror", cat:"home", tag:"Bedroom", name:"Dresser with full-length mirror", alt:"Tall dressing unit with mirror and white drawers"},
+    {img:"office-desk", cat:"home", tag:"Office", name:"Executive office desk", alt:"Wooden executive desk with black top and chrome chairs"},
+    {img:"office-chair", cat:"home", tag:"Office", name:"Ergonomic mesh office chair", alt:"High-back mesh office chair with headrest"}
+  ];
+
+  var grid = document.getElementById("products");
+  grid.innerHTML = products.map(function(p){
+    return '<article class="product" data-cat="'+p.cat+'">' +
+      '<div class="product-img"><picture><source srcset="assets/img/'+p.img+'.webp" type="image/webp">' +
+      '<img src="assets/img/'+p.img+'.jpg" alt="'+p.alt+'" loading="lazy" width="404" height="404"></picture></div>' +
+      '<div class="product-body"><span class="tag">'+p.tag+'</span><h3>'+p.name+'</h3>' +
+      '<span class="note">Price on request</span>' +
+      '<a class="btn btn-wa btn-sm" target="_blank" rel="noopener" href="'+waUrl(GREETING + "I’d like details and the price for: " + p.name + ".")+'">Enquire</a></div></article>';
+  }).join("");
+
+  // Filters
+  var chips = document.querySelectorAll(".chip");
+  function applyFilter(f){
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.dataset.filter === f)); });
+    grid.querySelectorAll(".product").forEach(function(el){ el.hidden = !(f === "all" || el.dataset.cat === f); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ applyFilter(c.dataset.filter); }); });
+  document.querySelectorAll("[data-goto]").forEach(function(a){
+    a.addEventListener("click", function(){ applyFilter(a.dataset.goto); });
+  });
+
+  // Generic WhatsApp links get a greeting (and product name where given)
+  document.querySelectorAll(".wa-link").forEach(function(a){
+    var p = a.dataset.product;
+    a.href = waUrl(GREETING + (p ? "I’d like to know about your " + p.toLowerCase() + "." : "I’d like to know more about your furniture."));
+  });
+
+  // Stars
+  var star = '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>';
+  var half = '<svg viewBox="0 0 24 24"><defs><linearGradient id="h"><stop offset="10%" stop-color="currentColor"/><stop offset="10%" stop-color="currentColor" stop-opacity=".25"/></linearGradient></defs><path fill="url(#h)" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>';
+  var empty = star.replace('fill="currentColor"','fill="currentColor" fill-opacity=".25"');
+  document.querySelectorAll("[data-stars]").forEach(function(el){
+    var v = parseFloat(el.dataset.stars), out = "";
+    for (var i = 1; i <= 5; i++) out += v >= i ? star : (v > i - 1 ? half : empty);
+    el.innerHTML = out;
+  });
+
+  // Mobile menu
+  var btn = document.getElementById("menu-btn"), links = document.getElementById("nav-links");
+  btn.addEventListener("click", function(){
+    var o = links.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(o));
+    btn.setAttribute("aria-label", o ? "Close menu" : "Open menu");
+  });
+  links.addEventListener("click", function(e){ if (e.target.closest("a")) { links.classList.remove("open"); btn.setAttribute("aria-expanded","false"); } });
+
+  // Enquiry composer: keeps the WhatsApp link in sync with the form
+  var form = document.getElementById("enquiry"), send = document.getElementById("enquiry-send");
+  function syncEnquiry(){
+    var n = form.elements.name.value.trim(), i = form.elements.interest.value, m = form.elements.message.value.trim();
+    var t = "Hello Universal Furniture, " + (n ? "this is " + n + ". " : "") + "I’m interested in " + i.toLowerCase() + "." + (m ? "\n\n" + m : "");
+    send.href = waUrl(t);
+  }
+  form.addEventListener("input", syncEnquiry);
+  form.addEventListener("submit", function(e){ e.preventDefault(); });
+  syncEnquiry();
+
+  // Copy phone number
+  var toast = document.getElementById("toast"), tt;
+  function showToast(msg){ toast.textContent = msg; toast.hidden = false; clearTimeout(tt); tt = setTimeout(function(){ toast.hidden = true; }, 2200); }
+  document.getElementById("copy-phone").addEventListener("click", function(){
+    var num = "+91 98729 90970";
+    var fallback = function(){
+      var r = document.createRange(); r.selectNodeContents(document.querySelector(".phone-row .num"));
+      var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); showToast("Number selected. Press copy on your device.");
+    };
+    try { navigator.clipboard.writeText(num).then(function(){ showToast("Number copied"); }, fallback); } catch(e) { fallback(); }
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
